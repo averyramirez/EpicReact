@@ -43,7 +43,7 @@ function useToggle({
     if (!onIsControlled) {
       dispatch(action)
     }
-    onChange(reducer({...state, on}, action), action)
+    onChange?.(reducer({...state, on}, action), action)
   }
 
   const toggle = () => dispatchWithOnChange({type: actionTypes.toggle})
