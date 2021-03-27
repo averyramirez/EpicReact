@@ -11,8 +11,10 @@ test('counter increments and decrements when the buttons are clicked', () => {
 
   ReactDOM.render(<Counter />, div)
   
-  console.log(document.body.innerHTML)
-  
+  const message = div.firstChild.querySelector('div')
+
+  expect(message.textContent).toBe('Current count: 0')
+
   // 🐨 create a div to render your component to (💰 document.createElement)
   //
   // 🐨 append the div to document.body (💰 document.body.append)
